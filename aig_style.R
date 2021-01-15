@@ -4,10 +4,10 @@
 #' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
 #' geom_line(colour = "#007f7f", size = 1) +
 #' geom_hline(yintercept = 0, size = 1, colour="#333333") +
-#' bbc_style()
+#' aig_style()
 # function
 aig_style <- function() {
-  font <- "Roboto"
+  font <- "Arial"
   
   ggplot2::theme(
     #Text format:
@@ -35,9 +35,9 @@ aig_style <- function() {
                                       color="#000000"),
     axis.text.x = ggplot2::element_text(margin=ggplot2::margin(5, b = 10)),
     axis.line.y = ggplot2::element_blank(),
-    axis.line.x.bottom = ggplot2::element_line(size = 1, colour = "#000000", linetype = 1),
     axis.ticks.y = ggplot2::element_blank(),
-    axis.ticks.x = ggplot2::element_line(size = 1, colour = "#000000"),
+    axis.line.x.bottom = ggplot2::element_line(colour = "#000000", size = 1, linetype = 1),
+    axis.ticks.x.bottom = ggplot2::element_line(colour = "#000000", size = 1),
 
     
     #Grid lines
