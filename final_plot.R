@@ -21,7 +21,7 @@
 #' logo_image_path = "logo_image_filepath.png"
 #' )
 
-finalise_plot <- function(plot_name,
+final_plot <- function(plot_name,
          source_name,
          save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
          width_pixels=640,
