@@ -1,4 +1,4 @@
-#save plot function
+#save plot function 
 save_plot <- function (plot_grid, width, height, save_filepath) {
   grid::grid.draw(plot_grid)
   #save it
