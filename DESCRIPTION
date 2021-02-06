@@ -1,8 +1,9 @@
 Package: aigtheme
 Title: MAKING GGPLOT GRAPHICS FOLLOWING AI GROUP STYLE GUIDE
 Version: 0.2
-Authors@R:
+Authors@R: c(
     person("Andrew", "Bridger", email = "andrewjohnbridger@gmail.com", c("aut", "cre"))
+    )
 Description: Helps create and export ggplot2 charts in the style used by 
     the Ai Group thanks to two useful functions, one for styling and another for exporting ggplot graphics. Code is based off bbplot from the BBC
 Depends: R (>= 3.3.0)
