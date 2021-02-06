@@ -1,4 +1,4 @@
-#' Add Ai Group theme to ggplot chart
+#' Add Ai Group theme to ggplot chart - the code is based bbplot from the BBC
 #' This function allows you to add the Ai Group theme to your ggplotgraphics.
 
 # function
