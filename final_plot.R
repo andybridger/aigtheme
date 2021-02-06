@@ -1,7 +1,34 @@
-#' Arrange alignment and save BBC ggplot chart
+#save plot function
+save_plot <- function (plot_grid, width, height, save_filepath) {
+  grid::grid.draw(plot_grid)
+  #save it
+  ggplot2::ggsave(filename = save_filepath,
+                  plot=plot_grid, width=(width/72), height=(height/72),  bg="white")
+}
+
+#Left align text
+left_align <- function(plot_name, pieces){
+  grob <- ggplot2::ggplotGrob(plot_name)
+  n <- length(pieces)
+  grob$layout$l[grob$layout$name %in% pieces] <- 2
+  return(grob)
+}
+
+#function to create footer (source and log)
+create_footer <- function (source_name, logo_image_path) {
+  #Make the footer
+  footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(1.1, "npc")),
+                           grid::textGrob(source_name,
+                                          x = 0.004, hjust = -0.01, gp = grid::gpar(fontsize=10)),
+                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.944))
+  return(footer)
+  
+}
+
+#' Arrange alignment and save Ai Group ggplot chart
 #'
-#' Running this function will save your plot with the correct guidelines for publication for a BBC News graphic.
-#' It will left align your title, subtitle and source, add the BBC blocks at the bottom right and save it to your specified location.
+#' Running this function will save your plot with the correct guidelines for publication for a Ai Group blog/media graphic.
+#' It will left align your title, subtitle and source, add the Ai Group logo at the bottom right and save it to your specified location.
 #' @param plot_name The variable name of the plot you have created that you want to format and save
 #' @param source_name The text you want to come after the text 'Source:' in the bottom left hand side of your side
 #' @param save_filepath Exact filepath that you want the plot to be saved to
@@ -20,13 +47,14 @@
 #' height_pixels = 450,
 #' logo_image_path = "logo_image_filepath.png"
 #' )
-
-final_plot <- function(plot_name,
-         source_name,
-         save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
-         width_pixels=640,
-         height_pixels=450,
-         logo_image_path = file.path(system.file("data", package = 'bbplot'),"placeholder.png")) {
+#'
+#' @export
+finalise_plot <- function(plot_name,
+                          source_name,
+                          save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
+                          width_pixels=640,
+                          height_pixels=450,
+                          logo_image_path = file.path(system.file("data", package = 'bbplot'),"placeholder.png")) {
   
   footer <- create_footer(source_name, logo_image_path)
   
