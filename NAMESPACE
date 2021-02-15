@@ -2,3 +2,4 @@
 
 export(aig_style)
 export(finalise_plot)
+export(aig_axes)
