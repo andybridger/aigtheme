@@ -2,7 +2,7 @@
 
 export(aig_style)
 export(finalise_plot)
-export(grattan_x_aig)
-export(grattan_y_aig)
+export(aig_x_continuous)
+export(aig_y_continuous)
 export(scale_x_continuous_aig)
 export(scale_y_continuous_aig)
