@@ -29,7 +29,7 @@
 #'
 #' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'      geom_point() +
-#'      grattan_y_continuous() +
+#'      aig_y_continuous() +
 #'      theme_grattan()
 #'
 #' p
@@ -40,7 +40,7 @@
 #'
 #' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'      geom_point() +
-#'      grattan_y_continuous(expand_bottom = 0.015) +
+#'      aig_y_continuous(expand_bottom = 0.015) +
 #'      theme_grattan()
 #'
 #' p
@@ -59,11 +59,11 @@
 #'
 #' p
 #'
-#' @name grattan_axes
+#' @name aig_axes
 #' @aliases NULL
 NULL
 
-#' @rdname grattan_axes
+#' @rdname aig_axes
 #' @export
 
 aig_y_continuous <- function(expand_bottom = 0, expand_top = 0.07, ...) {
