@@ -6,3 +6,7 @@ export(aig_x_continuous)
 export(aig_y_continuous)
 export(scale_x_continuous_aig)
 export(scale_y_continuous_aig)
+export(aig_colour_manual)
+export(aig_fill_manual)
+export(aig_pal)
+
