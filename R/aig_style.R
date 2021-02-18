@@ -11,7 +11,7 @@ aig_style <- function() {
     plot.title = ggplot2::element_text(family=font,
                                        size=20,
                                        face="bold",
-                                       color="#950020"),
+                                       color="#a6192e"),
     #This sets the font, size, type and colour of text for the chart's subtitle, as well as setting a margin between the title and the subtitle
     plot.subtitle = ggplot2::element_text(family=font,
                                           size=16,
