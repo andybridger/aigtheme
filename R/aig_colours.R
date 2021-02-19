@@ -8,7 +8,7 @@ aig_colours <- c(
   'aig_midblue' = "#8abbd0",
   'aig_beige'= "#efe8d1",
   'aig_grey' = "#333F48",
-  'aig_lightgrey' = "#a6192e"
+  'aig_lightgrey' = "#8e9fbc"
 )
 
 aig_red <- "#a6192e"
@@ -19,7 +19,7 @@ aig_purple <- "#7030a0"
 aig_midblue <- "#8abbd0"
 aig_beige <- "#efe8d1"
 aig_grey <- "#333F48"
-aig_lightgrey <- "#a6192e"
+aig_lightgrey <- "#8e9fbc"
 
 #########################
 #' Create a Aig-appropriate palette for your chart.
