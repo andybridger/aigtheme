@@ -1,25 +1,25 @@
 #' aig colour pallete
 aig_colours <- c(
-  'aig_red' = "#a6192e",
-  'aig_blue' = "#1f49a2",
-  'aig_pink' = "#f896a2",
-  'aig_aqua' = "#3fb5a0",
-  'aig_purple' = "#7030a0",
-  'aig_midblue' = "#8abbd0",
-  'aig_beige'= "#efe8d1",
+  'aig_blue' = "#1a698a",
+  'aig_teal' = "#1ab0d4",
+  'aig_purple' = "#663882",
   'aig_grey' = "#333F48",
-  'aig_lightgrey' = "#8e9fbc"
+  'aig_coolgrey' = "#8e9fbc",
+  'aig_red' = "#a6192e",
+  'aig_orange'= "#ffb533",
+  'aig_green' = "#87a31a",
+  'aig_lightblue' = "#e5f5fa"
 )
 
-aig_red <- "#a6192e"
-aig_blue <- "#1f49a2"
-aig_pink <- "#f896a2"
-aig_aqua <- "#3fb5a0"
-aig_purple <- "#7030a0"
-aig_midblue <- "#8abbd0"
-aig_beige <- "#efe8d1"
-aig_grey <- "#333F48"
-aig_lightgrey <- "#8e9fbc"
+ aig_blue <- "#1a698a"
+ aig_teal <- "#1ab0d4"
+ aig_purple <- "#663882"
+ aig_grey <- "#333F48"
+ aig_coolgrey <- "#8e9fbc"
+ aig_red <- "#a6192e"
+ aig_orange <- "#ffb533"
+ aig_green <- "#87a31a"
+ aig_lightblue <- "#e5f5fa"
 
 #########################
 #' Create a Aig-appropriate palette for your chart.
@@ -93,62 +93,62 @@ aig_pal <- function(n = 0, reverse = FALSE, faded = FALSE) {
 regular_palette <- function(n) {
   
   if (n == 1) {
-    palette <- aig_red
+    palette <- aig_blue
   } else if (n == "2a") {
-    palette <- c(aig_red,
-                 aig_pink)
+    palette <- c(aig_blue,
+                 aig_coolgrey)
   } else if (n == 2) {
-    palette <- c(aig_red,
-                 aig_blue)
+    palette <- c(aig_blue,
+                 aig_teal)
   } else if (n == 3) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink)
-  } else if (n == 4) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua)
-  } else if (n == 5) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua,
+    palette <- c(aig_blue,
+                 aig_teal,
                  aig_purple)
-  } else if (n == 6) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua,
+  } else if (n == 4) {
+    palette <- c(aig_blue,
+                 aig_teal,
                  aig_purple,
-                 aig_midblue)
-  } else if (n == 7) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua,
-                 aig_purple,
-                 aig_midblue,
-                 aig_beige)
-  } else if (n == 8) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua,
-                 aig_purple,
-                 aig_midblue,
-                 aig_beige,
                  aig_grey)
-  } else if (n == 9) {
-    palette <- c(aig_red,
-                 aig_blue,
-                 aig_pink,
-                 aig_aqua,
+  } else if (n == 5) {
+    palette <- c(aig_blue,
+                 aig_teal,
                  aig_purple,
-                 aig_midblue,
-                 aig_beige,
                  aig_grey,
-                 aig_lightgrey)
+                 aig_coolgrey)
+  } else if (n == 6) {
+    palette <- c(aig_blue,
+                 aig_teal,
+                 aig_purple,
+                 aig_grey,
+                 aig_coolgrey,
+                 aig_red)
+  } else if (n == 7) {
+    palette <- c(aig_blue,
+                 aig_teal,
+                 aig_purple,
+                 aig_grey,
+                 aig_coolgrey,
+                 aig_red,
+                 aig_orange)
+  } else if (n == 8) {
+    palette <- c(aig_blue,
+                 aig_teal,
+                 aig_purple,
+                 aig_grey,
+                 aig_coolgrey,
+                 aig_red,
+                 aig_orange,
+                 aig_green)
+  } else if (n == 9) {
+    palette <- c(aig_blue,
+                 aig_teal,
+                 aig_purple,
+                 aig_grey,
+                 aig_coolgrey,
+                 aig_red,
+                 aig_orange,
+                 aig_green,
+                 aig_lightblue)
   } 
   palette
 }
